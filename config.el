@@ -49,6 +49,8 @@
          (typescript-mode . tide-hl-identifier-mode)
          (before-save . tide-format-before-save)))
 
+(use-package prettier
+  :hook (ruby-mode . prettier-mode))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
