@@ -52,6 +52,9 @@
 (use-package prettier
   :hook (ruby-mode . prettier-mode))
 
+(use-package format-all
+  :hook (clojure-mode . format-all-mode))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
