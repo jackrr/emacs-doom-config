@@ -50,7 +50,11 @@
          (before-save . tide-format-before-save)))
 
 (use-package prettier
-  :hook (ruby-mode . prettier-mode))
+  :hook ((typescript-mode . prettier-mode)
+         (js-mode . prettier-mode)
+         (json-mode . prettier-mode)
+         (yaml-mode . prettier-mode)
+         (ruby-mode . prettier-mode)))
 
 (use-package format-all
   :hook (clojure-mode . format-all-mode))
