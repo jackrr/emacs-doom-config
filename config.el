@@ -46,8 +46,7 @@
   :hook ((js-mode . tide-setup)
          (js-mode . tide-hl-identifier-mode)
          (typescript-mode . tide-setup)
-         (typescript-mode . tide-hl-identifier-mode)
-         (before-save . tide-format-before-save)))
+         (typescript-mode . tide-hl-identifier-mode)))
 
 (use-package prettier
   :hook ((typescript-mode . prettier-mode)
