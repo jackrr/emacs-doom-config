@@ -76,3 +76,7 @@
 ;; they are implemented.
 
 (map! "M-y" #'counsel-yank-pop)
+;; smartparens-mode
+(map! :mode smartparens-mode :i
+      "C-<right>" #'sp-forward-slurp-sexp
+      "C-<left>" #'sp-forward-barf-sexp)
