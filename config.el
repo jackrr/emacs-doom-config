@@ -74,9 +74,14 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+(use-package smart-parens
+  :hook ((smartparens-mode . sp-use-smartparens-bindings))
+  :init (setq sp-override-key-bindings '(("C-k" . sp-kill-sexp))))
 
 (map! "M-y" #'counsel-yank-pop)
 ;; smartparens-mode
-(map! :mode smartparens-mode :i
-      "C-<right>" #'sp-forward-slurp-sexp
-      "C-<left>" #'sp-forward-barf-sexp)
+;; (map! :mode smartparens-mode :i
+;;       ;; "C-<right>" #'sp-forward-slurp-sexp
+;;       ;; "C-<left>" #'sp-forward-barf-sexp
+;;       "C-k" #'sp-kill-sexp)
